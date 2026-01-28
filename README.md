@@ -31,26 +31,33 @@ Open your folder in File Explorer.You should see:
 This is the folder structure for project :
 
 telecom-elt-pipeline/
-├── docker-compose.yml         
+├── docker-compose.yml
+├── Dockerfile
+│
 ├── data/
 │   └── raw/
-│       └── telecom_churn.csv  
+│       └── telecom_churn.csv
+│
 ├── airflow/
-│   └── dags/
-│       └── telecom_elt_pipeline.py
-    └── Plugins/
-│        
-|   └── Dockerfile
+│   ├── dags/
+│   │   └── telecom_elt_pipeline.py
+│   └── plugins/
+│
 ├── sql/
 │   ├── staging/
-│   │   └── 01-create-bronze-schema.sql   
-│   │   └── 02-create-silver-schema.sql 
+│   │   ├── 01-create-bronze-schema.sql
+│   │   └── 02-create-silver-schema.sql
+│   │
 │   └── analytics/
 │       └── 03-create-gold-schema.sql
+│
 ├── spark/
 │   └── jobs/
-│       ├── silver_transformation.py  
-│       └── gold_star_schema.py  
+│       ├── silver_transformation.py
+│       └── gold_star_schema.py
+│
+└── README.md
+
 
 
 
@@ -186,7 +193,7 @@ docker-compose exec airflow-webserver airflow connections add postgres_analytics
 ### Step 7.1: Trigger the Pipeline
 
 1. In Airflow UI, find your DAG: `telecom_elt_pyspark_pipeline`
-2. Click the **"Play"** button (▶️) on the right
+2. Click the **"Play"** button on the right
 3. Click **"Trigger DAG"**
 
 ### Step 7.2: Watch it Run
