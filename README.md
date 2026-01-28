@@ -30,33 +30,38 @@ Open your folder in File Explorer.You should see:
 
 This is the folder structure for project :
 
+## 📁 Project Structure
+
+```text
 telecom-elt-pipeline/
 ├── docker-compose.yml
 ├── Dockerfile
 │
 ├── data/
-│ └── raw/
-│ └── telecom_churn.csv
+│   └── raw/
+│       └── telecom_churn.csv
 │
 ├── airflow/
-│ ├── dags/
-│ │ └── telecom_elt_pipeline.py
-│ └── plugins/
+│   ├── dags/
+│   │   └── telecom_elt_pipeline.py
+│   └── plugins/
 │
 ├── sql/
-│ ├── staging/
-│ │ ├── 01-create-bronze-schema.sql
-│ │ └── 02-create-silver-schema.sql
-│ │
-│ └── analytics/
-│ └── 03-create-gold-schema.sql
+│   ├── staging/
+│   │   ├── 01-create-bronze-schema.sql
+│   │   └── 02-create-silver-schema.sql
+│   │
+│   └── analytics/
+│       └── 03-create-gold-schema.sql
 │
 ├── spark/
-│ └── jobs/
-│ ├── silver_transformation.py
-│ └── gold_star_schema.py
+│   └── jobs/
+│       ├── silver_transformation.py
+│       └── gold_star_schema.py
 │
 └── README.md
+```
+
 
 
 
