@@ -20,7 +20,7 @@ default_args = {
     'start_date': datetime(2024, 1, 1),
     'email': ['prashantpathak4144@gmail.com'],
     'email_on_failure': False,
-    'retries': 0,
+    'retries': 2,
     'retry_delay': timedelta(minutes=5),
 }
 
