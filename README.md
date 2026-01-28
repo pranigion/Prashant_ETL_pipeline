@@ -86,9 +86,11 @@ You should see `docker-compose.yml` in the list.
 ### Step 4: Start Docker Containers
 
 **Copy-paste this command:**
-
-docker-compose up -d
+'''
 docker-compose build
+docker-compose up -d
+'''
+
 
 **What this does:**
 - `docker-compose` = Tool to run multiple containers
